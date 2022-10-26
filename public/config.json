@@ -48,7 +48,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://twillioappcustomactivity.herokuapp.com/validate",
+           "url": "https://twillioappcustomactivity.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
