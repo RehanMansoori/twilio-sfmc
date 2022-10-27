@@ -87,61 +87,20 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-
-    console.log("5 -- For Execute");	
+    
+    console.log("5 -- For Publish");	
     console.log("4");	
     console.log("3");	
     console.log("2");	
     console.log("1");	
-    //console.log("Executed: "+req.body.inArguments[0]);
+    //console.log("Saved: "+req.body.inArguments[0]);
     
-    var requestBody = req.body.inArguments[0];
-
-    const accountSid = requestBody.accountSid;
-    const authToken = requestBody.authToken;
-    const to = requestBody.to;
-    const from = requestBody.messagingService;
-    const body = requestBody.body;;
-
-    const client = require('twilio')(accountSid, authToken); 
-     
-    client.messages 
-          .create({ 
-             body: body,
-             messagingService: messagingService,
-             to: to
-           }) 
-          .then(message => console.log(message.sid)) 
-          .done();
-
-
-
-    // FOR TESTING
+    // Data from the req and put it in an array accessible to the main app.
+    console.log( req.body );
     logData(req);
     res.send(200, 'Publish');
-
-    // Used to decode JWT
-    // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
-
-    //     // verification error -> unauthorized request
-    //     if (err) {
-    //         console.error(err);
-    //         return res.status(401).end();
-    //     }
-
-    //     if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
-    //         // decoded in arguments
-    //         var decodedArgs = decoded.inArguments[0];
-            
-    //         logData(req);
-    //         res.send(200, 'Execute');
-    //     } else {
-    //         console.error('inArguments invalid.');
-    //         return res.status(400).end();
-    //     }
-    // });
 };
+
 
 
 /*
