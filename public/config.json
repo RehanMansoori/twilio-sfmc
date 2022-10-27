@@ -4,6 +4,7 @@
        "icon": "images/iconSmall.png",
        "category": "message"
     },
+    "key": "REST-1", 
     "type": "REST",
     "lang": {
        "en-US": {
