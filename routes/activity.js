@@ -116,7 +116,7 @@ exports.execute = function (req, res) {
 	request(options, function (error, response) {
   		if (error) throw new Error(error);
   		console.log(response.body);
-		res.send(response.body)
+		res.send(JSON.parse(response.body));
 	});
 
 
