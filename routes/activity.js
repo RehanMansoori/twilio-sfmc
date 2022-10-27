@@ -97,8 +97,10 @@ exports.execute = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     console.log( req.body );
+
     logData(req);
-    res.send(200, 'Publish');
+    //res.send(200, 'Publish');
+    res.send({"access_token" : "success"});
 };
 
 

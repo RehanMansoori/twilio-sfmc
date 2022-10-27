@@ -20,7 +20,12 @@
                   "to": "7877706630" 
                 }               
             ],
-            "outArguments": [],
+            "outArguments": [
+		 {
+                "access_token": "{{Interaction.REST-1.access_token}}"}
+             } 
+
+		],
             "url": "https://twillioappcustomactivity.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
@@ -121,7 +126,15 @@
                         }
                     }
                 ],
-                "outArguments": []
+                "outArguments": [
+				{
+                        "access_token": {
+                            "dataType": "Text",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+			]
             }
         }
     }
