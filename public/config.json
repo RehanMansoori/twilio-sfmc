@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://eogjfqhv95w487u.m.pipedream.net",
+            "url": "https://twilio-sfmc.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -32,7 +32,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "c9616739-6646-40ca-916d-0a641c4be3b5",
        "save": {
-           "url": "https://eogjfqhv95w487u.m.pipedream.net",
+           "url": "https://twilio-sfmc.herokuapp.com/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -40,7 +40,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://eogjfqhv95w487u.m.pipedream.net",
+           "url": "https://twilio-sfmc.herokuapp.com/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -48,7 +48,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://eogjfqhv95w487u.m.pipedream.net",
+           "url": "https://twilio-sfmc.herokuapp.com/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -56,7 +56,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": "https://eogjfqhv95w487u.m.pipedream.net",
+           "url": "https://twilio-sfmc.herokuapp.com/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
