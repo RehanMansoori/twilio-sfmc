@@ -23,7 +23,7 @@
             ],
             "outArguments": [
 		 {
-                "access_token": "{{Interaction.REST-1.access_token}}"}
+                "access_token": "{{Interaction.REST-1.access_token}}"
              } 
 
 		],
