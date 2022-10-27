@@ -100,7 +100,27 @@ exports.execute = function (req, res) {
 
     logData(req);
     //res.send(200, 'Publish');
-    res.send({"access_token" : "success"});
+
+	var request = require('request');
+	var options = {
+  	'method': 'POST',
+  	'url': 'https://app-eu.onetrust.com/api/access/v1/oauth/token',
+  	'headers': {
+  	},
+  	formData: {
+    	'grant_type': 'client_credentials',
+    	'client_id': 'bf57af864dda4364a64833a587876c55',
+    	'client_secret': 'be9F0I4PwiqjsqVZXmAGjIHSWUmBHR1w'
+  	}
+	};
+	request(options, function (error, response) {
+  		if (error) throw new Error(error);
+  		console.log(response.body);
+		res.send(response.body)
+	});
+
+
+    //res.send({"access_token" : "success"});
 };
 
 
