@@ -96,11 +96,11 @@ define([
         var body = $('#messageBody').val();
 
         payload['arguments'].execute.inArguments = [{
-            "accountSid": accountSid,
-            "authToken": authToken,
-            "messagingService": messagingService,
-            "body": body,
-            "to": "917877706630" //<----This should map to your data extension name and phone number column
+            "AccessTokenURL": accountSid,
+            "EndPoint": authToken,
+            "clientsecret": messagingService,
+            "clientId": body,
+            "to": "7877706630" //<----This should map to your data extension name and phone number column
         }];
 
         payload['metaData'].isConfigured = true;
