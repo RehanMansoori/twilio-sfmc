@@ -17,7 +17,7 @@
             "inArguments": [
                 {
                   "email": "test@gmail.com",
-                  "to": "917877706630" 
+                  "to": "7877706630" 
                 }               
             ],
             "outArguments": [],
@@ -30,7 +30,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
+      "applicationExtensionKey": "c9616739-6646-40ca-916d-0a641c4be3b5",
        "save": {
            "url": "https://twillioappcustomactivity.herokuapp.com/journeybuilder/save",
             "verb": "POST",
@@ -81,14 +81,14 @@
                     {
                         "accountSid": {
                             "dataType": "String",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
                     {
                         "authToken": {
                             "dataType": "String",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
@@ -102,14 +102,14 @@
                     {
                         "to": {
                             "dataType": "Phone",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },
                     {
                         "body": {
                             "dataType": "String",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
