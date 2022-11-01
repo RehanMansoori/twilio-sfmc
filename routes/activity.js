@@ -137,7 +137,7 @@ exports.execute = function (req, res) {
 		  if (error) throw new Error(error);
 		  //console.log(response1.body);
 		  var body1 = JSON.parse(response1.body);
-		  console.log("==========================================================:", body1.Purposes);	
+		  console.log("==========================================================:", body1.content.Purposes);	
 
 		
 		});
