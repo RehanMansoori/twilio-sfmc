@@ -119,6 +119,31 @@ exports.execute = function (req, res) {
 		var body = JSON.parse(response.body);
 		console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::", body.access_token);	
 		console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::"+ body.access_token);	
+		
+		// Actual request start from here
+		var accrequest = require('request');
+		var accoptions = {
+		  'method': 'GET',
+		  'url': 'https://app-eu.onetrust.com/api/consentmanager/v1/datasubjects/profiles',
+		  'headers': {
+			'identifier': 'test@gmail.com',
+			'Authorization': 'Bearer '+body.access_token
+		  },
+		  formData: {
+
+		  }
+		};
+		accrequest(accoptions, function (error, response1) {
+		  if (error) throw new Error(error);
+		  //console.log(response1.body);
+		  var body1 = JSON.parse(response1.body);
+		  console.log("==========================================================:", body1);	
+
+		
+		});
+		
+		// Actual request END here
+
 		res.send(JSON.parse(response.body));
 	});
 
