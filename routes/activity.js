@@ -116,8 +116,9 @@ exports.execute = function (req, res) {
 	request(options, function (error, response) {
   		if (error) throw new Error(error);
   		console.log(response.body);
-		var body = response.body;
+		var body = JSON.parse(response.body);
 		console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::", body.access_token);	
+		console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::"+ body.access_token);	
 		res.send(JSON.parse(response.body));
 	});
 
