@@ -150,12 +150,12 @@ exports.execute = function (req, res) {
 					isActive = false;
 				}
 				
-				var responsebody =''
+				var responsebody = '';
 				if(isActive){
 					responsebody = {"status" : "OPT-IN"};
 				}
 				else{ 
-					res.send({"status" : "OPT-OUT"});
+					responsebody = {"status" : "OPT-OUT"};
 				}
 				res.send(responsebody);
 				
