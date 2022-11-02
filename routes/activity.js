@@ -142,7 +142,9 @@ exports.execute = function (req, res) {
 	      console.log("===================================2=======================:", body1.content[0].Purposes);
 
 			for(const val of body1.content[0].Purposes) {
-				console.log("INSIDE ARRAY"+ val);
+				console.log("INSIDE ARRAY"+ val.Id);
+				console.log("INSIDE ARRAY"+ val.Name);
+				console.log("INSIDE ARRAY"+ val.Status);
 			}		  
 
 		
