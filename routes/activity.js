@@ -168,11 +168,11 @@ exports.execute = function (req, res) {
 		
 		// Actual request END here
 
-		//res.send(JSON.parse(response.body));
+	res.send(JSON.parse(response.body));
 	});
 
 
-    res.send({"access_token" : "success"});
+    //res.send({"access_token" : "success"});
 };
 
 
