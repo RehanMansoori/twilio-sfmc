@@ -138,8 +138,12 @@ exports.execute = function (req, res) {
 		  //console.log(response1.body);
 		  var body1 = JSON.parse(response1.body);
 		  
-		  console.log("====================================1======================:", body1.content);
-	      console.log("===================================2=======================:", body1.content[0].Purposes[0]);		  
+		  //console.log("====================================1======================:", body1.content);
+	      console.log("===================================2=======================:", body1.content[0].Purposes);
+
+			for(const val of body1.content[0].Purposes) {
+				console.log("INSIDE ARRAY"+ val);
+			}		  
 
 		
 		});
