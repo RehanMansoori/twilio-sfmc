@@ -143,12 +143,16 @@ exports.execute = function (req, res) {
 
 			for(const val of body1.content[0].Purposes) {
 				//console.log("INSIDE ARRAY"+ val.Id);
+				
+				var responsebody = '';
 				//Arçelik Email Active
 				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
-					res.send({"status" : "OPT-IN"});
+					//res.send({"status" : "OPT-IN"});
+					responsebody = {"status" : "OPT-IN"};
 				}
 				
 				
+				res.send(responsebody);
 				
 				
 				
