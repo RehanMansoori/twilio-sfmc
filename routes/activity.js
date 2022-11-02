@@ -89,10 +89,10 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     
     console.log("5 -- For Publish");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
+   // console.log("4");	
+   // console.log("3");	
+   // console.log("2");	
+   // console.log("1");	
     //console.log("Saved: "+req.body.inArguments[0]);
     
     // Data from the req and put it in an array accessible to the main app.
@@ -143,15 +143,42 @@ exports.execute = function (req, res) {
 
 			for(const val of body1.content[0].Purposes) {
 				//console.log("INSIDE ARRAY"+ val.Id);
-				
+				//Arçelik Email
 				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
-					console.log("INSIDE ARRAY"+ val.Name);
-					console.log("INSIDE ARRAY"+ val.Status);
+					res.send({"status" : "OPT-IN"})
 				}
 				
-				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
-					console.log("INSIDE ARRAY"+ val.Name);
-					console.log("INSIDE ARRAY"+ val.Status);
+				// Beko Email
+				if(val.Id == "531dfa64-a963-4005-971a-d4dc48399ca7" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
+					res.send({"status" : "OPT-OUT"})
+				}
+				
+				//Grundig Email
+				if(val.Id == "74a012ac-db2d-464d-8b2a-581b63e0365b" && val.Status == "ACTIVE"){
+					res.send({"status" : "OPT-IN"})
+				}
+				//Oliz Email
+				if(val.Id == "9f4fbe04-9b74-42fe-9d51-cbbbb21688c1" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
+					res.send({"status" : "OPT-OUT"})
+				}
+				
+				//Arçelik SMS
+				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
+					res.send({"status" : "OPT-IN"})
+				}
+				
+				// Beko SMS
+				if(val.Id == "531dfa64-a963-4005-971a-d4dc48399ca7" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
+					res.send({"status" : "OPT-OUT"})
+				}
+				
+				//Grundig SMS
+				if(val.Id == "74a012ac-db2d-464d-8b2a-581b63e0365b" && val.Status == "ACTIVE"){
+					res.send({"status" : "OPT-IN"})
+				}
+				//Oliz SMS
+				if(val.Id == "9f4fbe04-9b74-42fe-9d51-cbbbb21688c1" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
+					res.send({"status" : "OPT-OUT"})
 				}
 				
 			}		  
