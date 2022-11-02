@@ -148,39 +148,6 @@ exports.execute = function (req, res) {
 					res.send({"status" : "OPT-IN"})
 				}
 				
-				// Beko Email
-				if(val.Id == "531dfa64-a963-4005-971a-d4dc48399ca7" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
-					res.send({"status" : "OPT-OUT"})
-				}
-				
-				//Grundig Email
-				if(val.Id == "74a012ac-db2d-464d-8b2a-581b63e0365b" && val.Status == "ACTIVE"){
-					res.send({"status" : "OPT-IN"})
-				}
-				//Oliz Email
-				if(val.Id == "9f4fbe04-9b74-42fe-9d51-cbbbb21688c1" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
-					res.send({"status" : "OPT-OUT"})
-				}
-				
-				//Arçelik SMS
-				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
-					res.send({"status" : "OPT-IN"})
-				}
-				
-				// Beko SMS
-				if(val.Id == "531dfa64-a963-4005-971a-d4dc48399ca7" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
-					res.send({"status" : "OPT-OUT"})
-				}
-				
-				//Grundig SMS
-				if(val.Id == "74a012ac-db2d-464d-8b2a-581b63e0365b" && val.Status == "ACTIVE"){
-					res.send({"status" : "OPT-IN"})
-				}
-				//Oliz SMS
-				if(val.Id == "9f4fbe04-9b74-42fe-9d51-cbbbb21688c1" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
-					res.send({"status" : "OPT-OUT"})
-				}
-				
 			}		  
 
 		
