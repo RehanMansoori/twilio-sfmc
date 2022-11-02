@@ -152,12 +152,12 @@ exports.execute = function (req, res) {
 				
 				var responsebody = '';
 				if(isActive){
-					responsebody = {"status" : "OPT-IN"};
+					//responsebody = {"status" : "OPT-IN"};
 				}
 				else{ 
-					responsebody = {"status" : "OPT-OUT"};
+					//responsebody = {"status" : "OPT-OUT"};
 				}
-				res.send(responsebody);
+				//res.send({"status" : "OPT-IN"});
 				
 				
 				
@@ -172,7 +172,7 @@ exports.execute = function (req, res) {
 	});
 
 
-    //res.send({"access_token" : "success"});
+    res.send({"access_token" : "success"});
 };
 
 
