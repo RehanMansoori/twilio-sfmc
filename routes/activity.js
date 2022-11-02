@@ -139,8 +139,7 @@ exports.execute = function (req, res) {
 		  var body1 = JSON.parse(response1.body);
 		  
 		  console.log("====================================1======================:", body1.content);
-		  console.log("===================================2=======================:", body1.content.Purposes);
-			console.log("===================================3=======================:", body1.content[0]);		  
+	      console.log("===================================2=======================:", body1.content[0].Purposes[0]);		  
 
 		
 		});
