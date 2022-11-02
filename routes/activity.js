@@ -139,12 +139,21 @@ exports.execute = function (req, res) {
 		  var body1 = JSON.parse(response1.body);
 		  
 		  //console.log("====================================1======================:", body1.content);
-	      console.log("===================================2=======================:", body1.content[0].Purposes);
+	      //console.log("===================================2=======================:", body1.content[0].Purposes);
 
 			for(const val of body1.content[0].Purposes) {
-				console.log("INSIDE ARRAY"+ val.Id);
-				console.log("INSIDE ARRAY"+ val.Name);
-				console.log("INSIDE ARRAY"+ val.Status);
+				//console.log("INSIDE ARRAY"+ val.Id);
+				
+				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
+					console.log("INSIDE ARRAY"+ val.Name);
+					console.log("INSIDE ARRAY"+ val.Status);
+				}
+				
+				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW") ){
+					console.log("INSIDE ARRAY"+ val.Name);
+					console.log("INSIDE ARRAY"+ val.Status);
+				}
+				
 			}		  
 
 		
