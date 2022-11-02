@@ -154,7 +154,7 @@ exports.execute = function (req, res) {
 					res.send({"status" : "OPT-IN"});
 				}
 				else{ 
-					res.send({"status" : "OPT-OUT"});
+					//res.send({"status" : "OPT-OUT"});
 				}
 				
 				
