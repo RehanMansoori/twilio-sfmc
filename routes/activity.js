@@ -153,7 +153,7 @@ exports.execute = function (req, res) {
 				if(isActive){
 					res.send({"status" : "OPT-IN"});
 				}
-				else{
+				else{ 
 					res.send({"status" : "OPT-OUT"});
 				}
 				
