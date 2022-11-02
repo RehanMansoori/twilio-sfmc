@@ -148,6 +148,11 @@ exports.execute = function (req, res) {
 					res.send({"status" : "OPT-IN"})
 				}
 				
+				//Arçelik Email
+				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW")){
+					res.send({"status" : "OPT-OUT"})
+				}
+				
 			}		  
 
 		
