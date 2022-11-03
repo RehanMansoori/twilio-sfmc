@@ -167,8 +167,9 @@ exports.execute = function (req, res) {
 						" }";
 					
 				}
-				res.send(JSON.parse(jsonResBody));
-			}		  
+				
+			}
+			res.send(JSON.parse(jsonResBody));			
 
 		
 		});
