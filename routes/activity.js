@@ -148,6 +148,10 @@ exports.execute = function (req, res) {
 				//Arçelik Email Active
 				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
 					isActive = 'true';
+					
+				}
+				
+				if(isActive == 'true' ){
 					console.log("===================================2============"+isActive);
 					res.send({"status" : "OPT-IN"});
 				}
