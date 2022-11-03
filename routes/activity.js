@@ -92,7 +92,7 @@ exports.execute = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     console.log( "Request body is "+ req.body );
 	console.log( "Request body is ", req.body );
-	console.log( "Request body is "+  JSON.stringify(req.body) );
+	console.log( "Request body is "+  JSON.stringify(req.body) ); 
 	
 
     logData(req);
