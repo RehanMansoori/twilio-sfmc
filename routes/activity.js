@@ -154,20 +154,20 @@ exports.execute = function (req, res) {
 				
 				if(isActive == 'true' ){
 					console.log("===================================2============"+isActive);
-					jsonResBody = "{"+
-							"status" + ":"+ "OPT-IN"+
-						"}";
+					jsonResBody = "{ "+
+							"status" + " : "+ "OPT-IN"+
+						" }";
 					
 					//res.send({"status" : "OPT-IN"});
 				}
 				else{
 					console.log("===================================2============"+isActive);
-					jsonResBody = "{"+
-							"status" + ":"+ "OPT-OUT"+
-						"}";
+					jsonResBody = "{ "+
+							"status" + " : "+ "OPT-OUT"+
+						" }";
 					
 				}
-				res.send(jsonResBody);
+				res.send(JSON.parse(jsonResBody));
 			}		  
 
 		
