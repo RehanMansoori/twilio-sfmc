@@ -104,7 +104,7 @@ define([
             "clientsecret": messagingService,
             "clientId": body,
 			"PurposeId": pid,
-            "to": "7877706630" //<----This should map to your data extension name and phone number columns
+            "to": "7877706630"  //<----This should map to your data extension name and phone number columns
         }];
 
         payload['metaData'].isConfigured = true;
