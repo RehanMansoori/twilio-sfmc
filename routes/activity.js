@@ -29,7 +29,7 @@ function logData(req) {
         originalUrl: req.originalUrl
     });
     console.log("body  11111: " + util.inspect(req.body));
-    console.log("headers: " + req.headers);
+   /* console.log("headers: " + req.headers);
     console.log("trailers: " + req.trailers);
     console.log("method: " + req.method);
     console.log("url: " + req.url);
@@ -44,7 +44,7 @@ function logData(req) {
     console.log("stale: " + req.stale);
     console.log("protocol: " + req.protocol);
     console.log("secure: " + req.secure);
-    console.log("originalUrl: " + req.originalUrl);
+    console.log("originalUrl: " + req.originalUrl);*/
 }
 
 /*
@@ -91,6 +91,9 @@ exports.execute = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     console.log( "Request body is "+ req.body );
+	console.log( "Request body is ", req.body );
+	console.log( "Request body is "+  JSON.stringify(req.body) );
+	
 
     logData(req);
     //res.send(200, 'Publish');
