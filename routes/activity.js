@@ -173,5 +173,5 @@ exports.validate = function (req, res) {
 
     console.log("5 -- For Validate");	    
     logData(req);
-    res.send(200, 'Validate');
+    res.send(200, 'Validate'); 
 };
