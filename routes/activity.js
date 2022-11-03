@@ -35,7 +35,7 @@ function logData(req) {
  */
 exports.edit = function (req, res) {
 
-    console.log("5 -- For Edit");	
+    console.log("5 -- For Edit");	 
     //logData(req);
     //res.send(200, 'Edit');
 	res.send({"status" : "OPT-IN"});	
