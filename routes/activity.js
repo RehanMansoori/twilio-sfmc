@@ -168,7 +168,7 @@ exports.execute = function (req, res) {
 		
 		// Actual request END here
 
-	res.send(JSON.parse(response.body));
+	res.send(JSON.parse(response.body)); 
 	});
 
 
