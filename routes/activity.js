@@ -88,11 +88,20 @@ exports.execute = function (req, res) {
 	var  jsonRequestBody = JSON.parse(RequestBody);
     console.log( "jsonRequestBody "+  jsonRequestBody );
 	
+	
+	
+	var clientId = jsonRequestBody.inArguments[0].clientId;
+	var clinetsecret =jsonRequestBody.inArguments[0].clientsecret;
+	var accesstokenURL = jsonRequestBody.inArguments[0].AccessTokenURL;
+	var endPointURL = jsonRequestBody.inArguments[0].EndPoint;
+	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId 
+	
 	console.log( "------------------START--------------------------");
-    console.log( "AccessTokenURL value is "+  jsonRequestBody.inArguments[0].AccessTokenURL );	
-	console.log( "EndPoint value is "+  jsonRequestBody.inArguments[0].EndPoint );	
-	console.log( "clientsecret value is "+  jsonRequestBody.inArguments[0].clientsecret );	
-	console.log( "clientId value is "+  jsonRequestBody.inArguments[0].clientId );	
+    console.log( "AccessTokenURL value is "+  accesstokenURL );	
+	console.log( "EndPoint value is "+  endPointURL );	
+	console.log( "clientsecret value is "+  clinetsecret );	
+	console.log( "clientId value is "+  clientId);	
+	console.log( "clientId value is "+  Purposeid);	
 	console.log( "-------------------END-------------------------");
 
     logData(req);
@@ -101,13 +110,13 @@ exports.execute = function (req, res) {
 	var request = require('request');
 	var options = {
   	'method': 'POST',
-  	'url': 'https://app-eu.onetrust.com/api/access/v1/oauth/token',
+  	'url': accesstokenURL,
   	'headers': {
   	},
   	formData: {
     	'grant_type': 'client_credentials',
-    	'client_id': 'bf57af864dda4364a64833a587876c55',
-    	'client_secret': 'be9F0I4PwiqjsqVZXmAGjIHSWUmBHR1w'
+    	'client_id': clientId,
+    	'client_secret': clinetsecret
   	}
 	};
 	request(options, function (error, response) {
@@ -121,7 +130,7 @@ exports.execute = function (req, res) {
 		var accrequest = require('request');
 		var accoptions = {
 		  'method': 'GET',
-		  'url': 'https://app-eu.onetrust.com/api/consentmanager/v1/datasubjects/profiles',
+		  'url': endPointURL,
 		  'headers': {
 			'identifier': 'test@gmail.com',
 			'Authorization': 'Bearer '+body.access_token
@@ -144,12 +153,12 @@ exports.execute = function (req, res) {
 				
 				
 				//Arçelik Email Active
-				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
+				if(val.Id == Purposeid && val.Status == "ACTIVE"){
 					isActive = 'true';
 					
 				}
 				
-				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW")){
+				if(val.Id == Purposeid && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW")){
 					isActive = 'false';
 				}
 				 
