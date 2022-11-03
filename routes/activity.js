@@ -141,35 +141,32 @@ exports.execute = function (req, res) {
 		  //console.log("====================================1======================:", body1.content);
 	      //console.log("===================================2=======================:", body1.content[0].Purposes);
 
+			var isActive = 'false';
 			for(const val of body1.content[0].Purposes) {
 				//console.log("INSIDE ARRAY"+ val.Id);
 				
-				var isActive = 'false';
+				
 				var jsonResBody = '';
 				//Arçelik Email Active
 				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
-					isActive = 'false';
+					isActive = 'true';
 					
-				}
-				
-				if(isActive == 'true' ){
-					console.log("===================================2============"+isActive);
-					jsonResBody = "{ "+
-							"status" + " : "+ "OPT-IN"+
-						" }";
-					
-					//res.send({"status" : "OPT-IN"});
 				}
 				else{
-					console.log("===================================2============"+isActive);
-					jsonResBody = "{ "+
-							"status" + " : "+ "OPT-OUT"+
-						" }";
-					
+					isActive = 'false';
 				}
 				
+				
 			}
-			res.send(JSON.parse(jsonResBody));			
+			
+			
+			if(isActive == "true"){
+				res.send(JSON.parse({"status" : "OPT-IN"}));	
+			}
+			else{ 
+				res.send(JSON.parse({"status" : "OPT-OUT"}));
+			}
+					
 
 		
 		});
