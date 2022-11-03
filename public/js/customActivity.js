@@ -100,6 +100,7 @@ define([
             "EndPoint": authToken,
             "clientsecret": messagingService,
             "clientId": body,
+			"PurposeId": accountSid
             "to": "7877706630" //<----This should map to your data extension name and phone number column
         }];
 
