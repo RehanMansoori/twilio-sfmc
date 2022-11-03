@@ -103,7 +103,7 @@ define([
             "EndPoint": authToken,
             "clientsecret": messagingService,
             "clientId": body,
-			"PurposeId": pid
+			"PurposeId": pid,
             "to": "7877706630" //<----This should map to your data extension name and phone number columns
         }];
 
