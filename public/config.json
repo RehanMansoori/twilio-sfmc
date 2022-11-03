@@ -106,10 +106,10 @@
                         }
                     },
 					{
-                        "PurposeId": {
+                        "pid": {
                             "dataType": "text",
                             "isNullable": true,
-                            "direction": "out"   
+                            "direction": "out"  
                         }
                     },
                     {

@@ -96,7 +96,7 @@ define([
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
-		var pid = $('#pid').val(); 
+		var pid = $('#pid').val();  
 
         payload['arguments'].execute.inArguments = [{ 
             "AccessTokenURL": accountSid,
@@ -104,7 +104,7 @@ define([
             "clientsecret": messagingService,
             "clientId": body,
 			"PurposeId": pid
-            "to": "7877706630" //<----This should map to your data extension name and phone number column 
+            "to": "7877706630" //<----This should map to your data extension name and phone number columns
         }];
 
         payload['metaData'].isConfigured = true;
