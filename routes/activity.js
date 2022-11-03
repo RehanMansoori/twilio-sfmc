@@ -146,7 +146,6 @@ exports.execute = function (req, res) {
 				//console.log("INSIDE ARRAY"+ val.Id);
 				
 				
-				var jsonResBody = '';
 				//Arçelik Email Active
 				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
 					isActive = 'true';
@@ -155,16 +154,14 @@ exports.execute = function (req, res) {
 				else{
 					isActive = 'false';
 				}
-				
-				
 			}
 			
 			
-			if(isActive == "true"){
-				res.send(JSON.parse({"status" : "OPT-IN"}));	
+			if(isActive == 'true' ){
+				res.send({"status" : "OPT-IN"});	
 			}
 			else{ 
-				res.send(JSON.parse({"status" : "OPT-OUT"}));
+				res.send({"status" : "OPT-OUT"});
 			}
 					
 
