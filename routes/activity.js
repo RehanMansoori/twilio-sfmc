@@ -117,8 +117,8 @@ exports.execute = function (req, res) {
   		if (error) throw new Error(error);
   		console.log(response.body);
 		var body = JSON.parse(response.body);
-		console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::", body.access_token);	
-		console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::"+ body.access_token);	
+		//console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::", body.access_token);	
+		//console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::"+ body.access_token);	
 		
 		// Actual request start from here
 		var accrequest = require('request');
@@ -149,6 +149,7 @@ exports.execute = function (req, res) {
 				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
 					isActive = 'true';
 					console.log("===================================2============"+isActive);
+					res.send({"status" : "OPT-IN"});
 				}
 				
 			}		  
@@ -158,7 +159,7 @@ exports.execute = function (req, res) {
 		
 		// Actual request END here
 
-	res.send(JSON.parse(response.body)); 
+	//res.send(JSON.parse(response.body)); 
 	});
 
 
