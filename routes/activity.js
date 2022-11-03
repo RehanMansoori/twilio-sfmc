@@ -37,7 +37,8 @@ exports.edit = function (req, res) {
 
     console.log("5 -- For Edit");	
     //logData(req);
-    res.send(200, 'Edit');
+    //res.send(200, 'Edit');
+	res.send({"status" : "OPT-IN"});	
 };
 
 /*
@@ -47,7 +48,8 @@ exports.save = function (req, res) {
     
     console.log("5 -- For Save");	
     //logData(req);
-    res.send(200, 'Save');
+    //res.send(200, 'Save');
+	res.send({"status" : "OPT-IN"});	
 };
 
 /*
@@ -144,6 +146,8 @@ exports.execute = function (req, res) {
 	});
 
     //res.send({"access_token" : "success"});
+	//res.send({"status" : "OPT-IN"});
+	res.send({"status" : "OPT-IN"});		
 };
 
 
@@ -155,7 +159,8 @@ exports.publish = function (req, res) {
 
     console.log("5 -- For Publish");	
     //logData(req);
-    res.send(200, 'Publish');
+    //res.send(200, 'Publish');
+	res.send({"status" : "OPT-IN"});	
 };
 
 /*
@@ -165,5 +170,6 @@ exports.validate = function (req, res) {
 
     console.log("5 -- For Validate");	
     //logData(req);
-    res.send(200, 'Validate');
+    //res.send(200, 'Validate');
+	res.send({"status" : "OPT-IN"});	
 };
