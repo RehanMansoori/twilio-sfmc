@@ -28,7 +28,7 @@ function logData(req) {
         secure: req.secure,
         originalUrl: req.originalUrl
     });
-    /*console.log("body: " + util.inspect(req.body));
+    console.log("body  11111: " + util.inspect(req.body));
     console.log("headers: " + req.headers);
     console.log("trailers: " + req.trailers);
     console.log("method: " + req.method);
@@ -44,7 +44,7 @@ function logData(req) {
     console.log("stale: " + req.stale);
     console.log("protocol: " + req.protocol);
     console.log("secure: " + req.secure);
-    console.log("originalUrl: " + req.originalUrl);*/
+    console.log("originalUrl: " + req.originalUrl);
 }
 
 /*
@@ -53,6 +53,11 @@ function logData(req) {
 exports.edit = function (req, res) {
 
     console.log("5 -- For Edit");	
+
+    //console.log("Edited: "+req.body.inArguments[0]);    
+    
+    // Data from the req and put it in an array accessible to the main app.
+    //console.log( req.body );
     logData(req);
     res.send(200, 'Edit');
 };
@@ -63,6 +68,11 @@ exports.edit = function (req, res) {
 exports.save = function (req, res) {
     
     console.log("5 -- For Save");	
+
+    //console.log("Saved: "+req.body.inArguments[0]);
+    
+    // Data from the req and put it in an array accessible to the main app.
+    //console.log( req.body );
     logData(req);
     res.send(200, 'Save');
 };
@@ -73,10 +83,14 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     
     console.log("5 -- For EXECUTE");	
+   // console.log("4");	
+   // console.log("3");	
+   // console.log("2");	
+   // console.log("1");	
+    //console.log("Saved: "+req.body.inArguments[0]);
     
     // Data from the req and put it in an array accessible to the main app.
-    console.log( "Request body is "+ req.body[0] );
-	//console.log( "Request body is "+ req.body[0].inArguments);
+    console.log( "Request body is "+ req.body );
 
     logData(req);
     //res.send(200, 'Publish');
@@ -97,6 +111,8 @@ exports.execute = function (req, res) {
   		if (error) throw new Error(error);
   		console.log(response.body);
 		var body = JSON.parse(response.body);
+		//console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::", body.access_token);	
+		//console.log(":::::::::::::::::::::::::::::::::::::::::::::::::::::::::"+ body.access_token);	
 		
 		// Actual request start from here
 		var accrequest = require('request');
@@ -115,10 +131,14 @@ exports.execute = function (req, res) {
 		  if (error) throw new Error(error);
 		  //console.log(response1.body);
 		  var body1 = JSON.parse(response1.body);
-		 
+		  
+		  //console.log("====================================1======================:", body1.content);
+	      //console.log("===================================2=======================:", body1.content[0].Purposes);
 
 			var isActive = 'false';
 			for(const val of body1.content[0].Purposes) {
+				//console.log("INSIDE ARRAY"+ val.Id);
+				
 				
 				//Arçelik Email Active
 				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && val.Status == "ACTIVE"){
@@ -164,6 +184,13 @@ exports.publish = function (req, res) {
     console.log("5 -- For Publish");	
     logData(req);
     res.send(200, 'Publish');
+
+    //console.log("Published: "+req.body.inArguments[0]);        
+    
+    // Data from the req and put it in an array accessible to the main app.
+    //console.log( req.body );
+//     logData(req);
+//     res.send(200, 'Publish');
 };
 
 /*
@@ -171,7 +198,15 @@ exports.publish = function (req, res) {
  */
 exports.validate = function (req, res) {
 
-    console.log("5 -- For Validate");	    
+    console.log("5 -- For Validate");	
+    console.log("4");	
+    console.log("3");	
+    console.log("2");	
+    console.log("1");	
+    //console.log("Validated: "+req.body.inArguments[0]);       
+    
+    // Data from the req and put it in an array accessible to the main app.
+    //console.log( req.body );
     logData(req);
-    res.send(200, 'Validate'); 
+    res.send(200, 'Validate');
 };
