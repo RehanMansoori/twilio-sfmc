@@ -65,7 +65,9 @@ define([
                 if (key === 'body') {
                     $('#messageBody').val(val);
                 }                                                               
-
+				if (key === 'pid') {
+                    $('#pid').val(val);
+                } 
             })
         });
 
@@ -94,13 +96,14 @@ define([
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
+		var pid = $('#pid').val();
 
         payload['arguments'].execute.inArguments = [{ 
             "AccessTokenURL": accountSid,
             "EndPoint": authToken,
             "clientsecret": messagingService,
             "clientId": body,
-			"PurposeId": accountSid
+			"PurposeId": pid
             "to": "7877706630" //<----This should map to your data extension name and phone number column 
         }];
 
