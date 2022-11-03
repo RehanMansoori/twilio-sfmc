@@ -104,7 +104,14 @@
                             "isNullable": true,
                             "direction": "out"   
                         }
-                    },                    
+                    },   
+					{
+                        "PurposeId": {
+                            "dataType": "text",
+                            "isNullable": true,
+                            "direction": "out"   
+                        }
+                    },
                     {
                         "to": {
                             "dataType": "Phone",
