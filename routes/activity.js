@@ -139,7 +139,6 @@ exports.execute = function (req, res) {
 			}
 		});
 		
-		// Actual request END here
 
 	//res.send(JSON.parse(response.body)); 
 	});
@@ -147,8 +146,7 @@ exports.execute = function (req, res) {
 		//res.send({"status" : "NO-Response"});
 	//}
     //res.send({"access_token" : "success"});
-	//res.send({"status" : "OPT-IN"});
-	//res.send({"status" : "OPT-IN"});		
+		
 };
 
 
