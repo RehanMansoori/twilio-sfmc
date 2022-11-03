@@ -93,6 +93,11 @@ exports.execute = function (req, res) {
     console.log( "Request body is "+ req.body );
 	console.log( "Request body is ", req.body );
 	console.log( "Request body is "+  JSON.stringify(req.body) ); 
+	var jsonRequestBody = JSON.stringify(req.body);
+	
+	console.log( "First value is "+  jsonRequestBody.inArguments ); 
+	console.log( "First value is "+  jsonRequestBody.inArguments[0] );
+    console.log( "First value is "+  jsonRequestBody.inArguments[0].AccessTokenURL );	
 	
 
     logData(req);
