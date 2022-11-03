@@ -37,7 +37,7 @@ exports.edit = function (req, res) {
 
     console.log("5 -- For Edit");	 
     //logData(req);
-    //res.send(200, 'Edit');
+    //res.send(200, 'Edit'); 
 	res.send({"status" : "OPT-IN"});	
 };
 
@@ -79,7 +79,7 @@ exports.execute = function (req, res) {
 
     logData(req);
     //res.send(200, 'Publish');
-
+	var isActive = '';
 	var request = require('request');
 	var options = {
   	'method': 'POST',
@@ -115,7 +115,6 @@ exports.execute = function (req, res) {
 		  //console.log(response1.body);
 		  var body1 = JSON.parse(response1.body);
 		 
-			var isActive = 'false';
 			for(const val of body1.content[0].Purposes) {
 				//console.log("INSIDE ARRAY"+ val.Id);
 				
@@ -134,7 +133,7 @@ exports.execute = function (req, res) {
 				console.log(" -------------------true----------------");
 				res.send({"status" : "OPT-IN"});	
 			}
-			else{ 
+			if(isActive == 'false' ){
 				console.log(" -------------------false----------------");
 				res.send({"status" : "OPT-OUT"});
 			}
@@ -144,10 +143,12 @@ exports.execute = function (req, res) {
 
 	//res.send(JSON.parse(response.body)); 
 	});
-
+	if(isActive == ''){
+		res.send({"status" : "NO-Response"});
+	}
     //res.send({"access_token" : "success"});
 	//res.send({"status" : "OPT-IN"});
-	res.send({"status" : "OPT-IN"});		
+	//res.send({"status" : "OPT-IN"});		
 };
 
 
