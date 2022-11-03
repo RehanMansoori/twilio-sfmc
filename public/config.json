@@ -4,7 +4,7 @@
        "icon": "images/iconSmall.png",
        "category": "message"
     },
-    "key": "REST-1", 
+    "key": "REST-1",
     "type": "REST",
     "lang": {
        "en-US": {
@@ -24,7 +24,7 @@
             "outArguments": [
 			{
                 "status": "{{Interaction.REST-1.status}}"
-             } 
+            } 
 
 		],
             "url": "https://twillioappcustomactivity.herokuapp.com/journeybuilder/execute",
