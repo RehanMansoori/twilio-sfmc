@@ -143,9 +143,9 @@ exports.execute = function (req, res) {
 
 	//res.send(JSON.parse(response.body)); 
 	});
-	if(isActive == ''){
-		res.send({"status" : "NO-Response"});
-	}
+	//if(isActive == ''){
+		//res.send({"status" : "NO-Response"});
+	//}
     //res.send({"access_token" : "success"});
 	//res.send({"status" : "OPT-IN"});
 	//res.send({"status" : "OPT-IN"});		
