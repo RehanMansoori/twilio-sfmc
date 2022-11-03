@@ -76,7 +76,7 @@ exports.execute = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     console.log( "Request body is "+ req.body );
-	console.log( "Request body is "+ req.body.inArguments[0);
+	console.log( "Request body is "+ req.body.inArguments[0]);
 
     logData(req);
     //res.send(200, 'Publish');
