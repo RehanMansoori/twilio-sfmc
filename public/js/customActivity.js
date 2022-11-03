@@ -95,13 +95,13 @@ define([
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
 
-        payload['arguments'].execute.inArguments = [{
+        payload['arguments'].execute.inArguments = [{ 
             "AccessTokenURL": accountSid,
             "EndPoint": authToken,
             "clientsecret": messagingService,
             "clientId": body,
 			"PurposeId": accountSid
-            "to": "7877706630" //<----This should map to your data extension name and phone number column
+            "to": "7877706630" //<----This should map to your data extension name and phone number column 
         }];
 
         payload['metaData'].isConfigured = true;

@@ -83,23 +83,17 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     
     console.log("5 -- For EXECUTE");	
-   // console.log("4");	
-   // console.log("3");	
-   // console.log("2");	
-   // console.log("1");	
-    //console.log("Saved: "+req.body.inArguments[0]);
-    
-    // Data from the req and put it in an array accessible to the main app.
-    console.log( "Request body is "+ req.body );
-	console.log( "Request body is ", req.body );
-	console.log( "Request body is "+  JSON.stringify(req.body) ); 
+ 
 	var RequestBody = JSON.stringify(req.body);
 	var  jsonRequestBody = JSON.parse(RequestBody);
-	console.log( "jsonRequestBody  "+  jsonRequestBody ); 
-	console.log( "First value is "+  jsonRequestBody.inArguments ); 
-	console.log( "First value is "+  jsonRequestBody.inArguments[0] );
-    console.log( "First value is "+  jsonRequestBody.inArguments[0].AccessTokenURL );	
+    console.log( "jsonRequestBody "+  jsonRequestBody );
 	
+	console.log( "------------------START--------------------------");
+    console.log( "AccessTokenURL value is "+  jsonRequestBody.inArguments[0].AccessTokenURL );	
+	console.log( "EndPoint value is "+  jsonRequestBody.inArguments[0].EndPoint );	
+	console.log( "clientsecret value is "+  jsonRequestBody.inArguments[0].clientsecret );	
+	console.log( "clientId value is "+  jsonRequestBody.inArguments[0].clientId );	
+	console.log( "-------------------END-------------------------");
 
     logData(req);
     //res.send(200, 'Publish');
