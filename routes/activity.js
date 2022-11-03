@@ -151,9 +151,12 @@ exports.execute = function (req, res) {
 					isActive = 'true';
 					
 				}
-				else{
+				
+				if(val.Id == "8a50804c-8502-4fa2-bf5f-bf661f7a3523" && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW")){
 					isActive = 'false';
 				}
+				 
+
 			}
 			
 			
