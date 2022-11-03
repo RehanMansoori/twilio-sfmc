@@ -22,8 +22,8 @@
                 }               
             ],
             "outArguments": [
-		 {
-                "access_token": "{{Interaction.REST-1.access_token}}"
+			{
+                "status": "{{Interaction.REST-1.status}}"
              } 
 
 		],
@@ -136,7 +136,7 @@
                 ],
                 "outArguments": [
 				{
-                        "access_token": {
+                        "status": {
                             "dataType": "Text",
                             "direction": "out",
                             "access": "visible"
