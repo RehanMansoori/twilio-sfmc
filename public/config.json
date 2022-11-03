@@ -104,7 +104,7 @@
                             "isNullable": true,
                             "direction": "out"   
                         }
-                    },   
+                    },
 					{
                         "PurposeId": {
                             "dataType": "text",

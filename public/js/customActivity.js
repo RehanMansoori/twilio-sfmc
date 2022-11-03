@@ -96,7 +96,7 @@ define([
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
-		var pid = $('#pid').val();
+		var pid = $('#pid').val(); 
 
         payload['arguments'].execute.inArguments = [{ 
             "AccessTokenURL": accountSid,
