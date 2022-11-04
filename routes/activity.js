@@ -74,8 +74,8 @@ exports.execute = function (req, res) {
 	var accesstokenURL = 'https://app-eu.onetrust.com/api/access/v1/oauth/token';
 	var endPointURL = 'https://app-eu.onetrust.com/api/consentmanager/v1/datasubjects/profiles';
 	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId ;
-	var email  = jsonRequestBody.inArguments[0].Email;
-	var Phone  = jsonRequestBody.inArguments[0].Phone; 
+	var email  = jsonRequestBody.inArguments[0].email;
+	var Phone  = jsonRequestBody.inArguments[0].to; 
 	
 	
 	
