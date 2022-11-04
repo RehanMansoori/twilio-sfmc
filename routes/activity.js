@@ -61,7 +61,7 @@ exports.execute = function (req, res) {
  
 	var RequestBody = JSON.stringify(req.body);
 	var  jsonRequestBody = JSON.parse(RequestBody);
-    console.log( "jsonRequestBody is::  "+  jsonRequestBody.inArguments[0] );
+    console.log( "jsonRequestBody is:::  ",  jsonRequestBody.inArguments[0] );
 	
 	var clientId = jsonRequestBody.inArguments[0].clientId;
 	var clinetsecret =jsonRequestBody.inArguments[0].clientsecret;
