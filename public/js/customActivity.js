@@ -103,8 +103,9 @@ define([
             "EndPoint": authToken,
             "clientsecret": messagingService,
             "clientId": body,
-			"PurposeId": pid
-           // "to": "7877706630"  //<----This should map to your data extension name and phone number columns
+			"PurposeId": pid,
+			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}"
+            //"to": "7877706630"  //<----This should map to your data extension name and phone number columns
         }];
 
         payload['metaData'].isConfigured = true;
