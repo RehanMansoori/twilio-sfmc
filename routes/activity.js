@@ -63,11 +63,19 @@ exports.execute = function (req, res) {
 	var  jsonRequestBody = JSON.parse(RequestBody);
     console.log( "jsonRequestBody is:::  ",  jsonRequestBody.inArguments[0] );
 	
-	var clientId = jsonRequestBody.inArguments[0].clientId;
+	/*var clientId = jsonRequestBody.inArguments[0].clientId; 
 	var clinetsecret =jsonRequestBody.inArguments[0].clientsecret;
 	var accesstokenURL = jsonRequestBody.inArguments[0].AccessTokenURL;
 	var endPointURL = jsonRequestBody.inArguments[0].EndPoint;
+	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId */
+	
+	var clientId = 'bf57af864dda4364a64833a587876c55'; 
+	var clinetsecret = 'be9F0I4PwiqjsqVZXmAGjIHSWUmBHR1w';
+	var accesstokenURL = 'https://app-eu.onetrust.com/api/access/v1/oauth/token';
+	var endPointURL = 'https://app-eu.onetrust.com/api/consentmanager/v1/datasubjects/profiles';
 	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId 
+	
+	
 	
 	console.log( "------------------START--------------------------");
     console.log( "AccessTokenURL value is "+  accesstokenURL );	

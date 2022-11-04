@@ -92,13 +92,13 @@ define([
 
     function save() {
 
-        var accountSid = $('#accountSID').val();
+        /*var accountSid = $('#accountSID').val();
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
-        var body = $('#messageBody').val();
+        var body = $('#messageBody').val();*/
 		var pid = $('#pid').val();  
 
-        payload['arguments'].execute.inArguments = [{ 
+        /*payload['arguments'].execute.inArguments = [{ 
             "AccessTokenURL": accountSid,
             "EndPoint": authToken,
             "clientsecret": messagingService,
@@ -106,7 +106,14 @@ define([
 			"PurposeId": pid,
 			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}" 
             //"to": "7877706630"  //<----This should map to your data extension name and phone number columns 
+        }];*/
+		
+		payload['arguments'].execute.inArguments = [{ 
+			"PurposeId": pid,
+			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}" 
+            //"to": "7877706630"  //<----This should map to your data extension name and phone number columns 
         }];
+
 
         payload['metaData'].isConfigured = true;
 

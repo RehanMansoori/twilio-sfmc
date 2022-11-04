@@ -81,28 +81,7 @@
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [
-                    {
-                        "accountSid": {
-                            "dataType": "String",
-                            "isNullable": true,
-                            "direction": "out"   
-                        }
-                    },                    
-                    {
-                        "authToken": {
-                            "dataType": "String",
-                            "isNullable": true,
-                            "direction": "out"   
-                        }
-                    },                    
-                    {
-                        "from": {
-                            "dataType": "Phone",
-                            "isNullable": true,
-                            "direction": "out"   
-                        }
-                    },
+                "inArguments": [                  
 					{
                         "pid": {
                             "dataType": "text",
@@ -113,13 +92,6 @@
                     {
                         "to": {
                             "dataType": "Phone",
-                            "isNullable": true,
-                            "direction": "out"   
-                        }
-                    },
-                    {
-                        "body": {
-                            "dataType": "String",
                             "isNullable": true,
                             "direction": "out"   
                         }
