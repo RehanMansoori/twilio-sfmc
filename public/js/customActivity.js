@@ -104,7 +104,7 @@ define([
             "clientsecret": messagingService,
             "clientId": body,
 			"PurposeId": pid,
-			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}"
+			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}" 
             //"to": "7877706630"  //<----This should map to your data extension name and phone number columns 
         }];
 
