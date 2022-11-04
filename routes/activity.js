@@ -73,15 +73,19 @@ exports.execute = function (req, res) {
 	var clinetsecret = 'be9F0I4PwiqjsqVZXmAGjIHSWUmBHR1w';
 	var accesstokenURL = 'https://app-eu.onetrust.com/api/access/v1/oauth/token';
 	var endPointURL = 'https://app-eu.onetrust.com/api/consentmanager/v1/datasubjects/profiles';
-	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId 
+	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId ;
+	var email  = jsonRequestBody.inArguments[0].Email;
+	var Phone  = jsonRequestBody.inArguments[0].Phone; 
 	
 	
 	
 	console.log( "------------------START--------------------------");
-    console.log( "AccessTokenURL value is "+  accesstokenURL );	
+    /*console.log( "AccessTokenURL value is "+  accesstokenURL );	
 	console.log( "EndPoint value is "+  endPointURL );	
 	console.log( "clientsecret value is "+  clinetsecret );	
-	console.log( "clientId value is "+  clientId);	
+	console.log( "clientId value is "+  clientId);*/
+	console.log( "clientId value is "+  email);	
+	console.log( "clientId value is "+  Phone);	
 	console.log( "clientId value is "+  Purposeid);	
 	console.log( "-------------------END-------------------------");
 
@@ -111,7 +115,7 @@ exports.execute = function (req, res) {
 		  'method': 'GET',
 		  'url': endPointURL,
 		  'headers': {
-			'identifier': 'test@gmail.com',
+			'identifier': email,
 			'Authorization': 'Bearer '+body.access_token
 		  },
 		  formData: {
@@ -123,16 +127,18 @@ exports.execute = function (req, res) {
 		  //console.log(response1.body);
 		  var body1 = JSON.parse(response1.body);
 		 
-			for(const val of body1.content[0].Purposes) {
-				//console.log("INSIDE ARRAY"+ val.Id);
-				
-				
-				//Arçelik Email Active
-				if(val.Id == Purposeid && val.Status == "ACTIVE"){
-					isActive = 'true';	
-				}
-				if(val.Id == Purposeid && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW")){
-					isActive = 'false';
+			if(body1.content.length > 0) {
+				for(const val of body1.content[0].Purposes) {
+					//console.log("INSIDE ARRAY"+ val.Id);
+					
+					
+					//Arçelik Email Active
+					if(val.Id == Purposeid && val.Status == "ACTIVE"){
+						isActive = 'true';	
+					}
+					if(val.Id == Purposeid && ( val.Status == "NO_CONSENT" || val.Status == "WITHDRAW")){
+						isActive = 'false';
+					}
 				}
 			}
 			
@@ -144,6 +150,10 @@ exports.execute = function (req, res) {
 			if(isActive == 'false' ){
 				console.log(" -------------------false----------------");
 				res.send({"status" : "OPT-OUT"});
+			}
+			if(isActive == '' ){
+				console.log(" -------------------no response----------------");
+				res.send({"status" : "No-Response"});
 			}
 		});
 		

@@ -110,8 +110,8 @@ define([
 		
 		payload['arguments'].execute.inArguments = [{ 
 			"PurposeId": pid,
-			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}" 
-            //"to": "7877706630"  //<----This should map to your data extension name and phone number columns 
+			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}" ,
+            "to": "{{Contact.Attribute.Custom_Activity_Test.Phone}}"   
         }];
 
 
