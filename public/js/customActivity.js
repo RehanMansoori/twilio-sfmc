@@ -97,7 +97,7 @@ define([
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();*/
 		var pid = $('#pid').val();  
-        var emailbody = "{{Contact.Attribute.Custom_Activity_Test.Email}}";
+        var emailbody = "{{Contact.Attribute.Custom_Activity_Test.Email}}"; 
         /*payload['arguments'].execute.inArguments = [{ 
             "AccessTokenURL": accountSid,
             "EndPoint": authToken,
