@@ -76,7 +76,18 @@ exports.execute = function (req, res) {
 	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId ;
 	var email  = jsonRequestBody.inArguments[0].email;
 	var Phone  = jsonRequestBody.inArguments[0].to; 
+	var identifierValue = '';
 	
+	// Check the Purposeid for EMAIL
+	if(Purposeid == '8a50804c-8502-4fa2-bf5f-bf661f7a3523' || Purposeid == '531dfa64-a963-4005-971a-d4dc48399ca7' || Purposeid == '74a012ac-db2d-464d-8b2a-581b63e0365b' || Purposeid == '9f4fbe04-9b74-42fe-9d51-cbbbb21688c1')
+	{
+		identifierValue = email;
+	}
+	// Check the Purposeid for SMS
+	if(Purposeid == '97480c2d-f44a-4db4-8fc3-5e893fc3cdec' || Purposeid == 'b10a19cd-85a8-4d94-8e5b-a8d3d8642366' || Purposeid == '36bb5039-76d9-4f65-b8ca-8b2c0fc5b7bc'  || Purposeid == 'db1b65d5-3589-4fb2-9a44-ddf1427397e1')
+	{
+		identifierValue = Phone;
+	}
 	
 	
 	console.log( "------------------START--------------------------");
@@ -87,6 +98,7 @@ exports.execute = function (req, res) {
 	console.log( "clientId value is "+  email);	
 	console.log( "clientId value is "+  Phone);	
 	console.log( "clientId value is "+  Purposeid);	
+	console.log( "clientId value is "+  identifierValue);	
 	console.log( "-------------------END-------------------------");
 
     logData(req);
@@ -115,7 +127,7 @@ exports.execute = function (req, res) {
 		  'method': 'GET',
 		  'url': endPointURL,
 		  'headers': {
-			'identifier': email,
+			'identifier': identifierValue,
 			'Authorization': 'Bearer '+body.access_token
 		  },
 		  formData: {
