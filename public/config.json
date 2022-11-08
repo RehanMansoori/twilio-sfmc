@@ -1,7 +1,7 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/iconSmall.png",
+       "icon": "images/onetrustlogo.png",
        "category": "message"
     },
     "key": "REST-1",
