@@ -86,7 +86,7 @@ exports.execute = function (req, res) {
 	// Check the Purposeid for SMS
 	if(Purposeid == '97480c2d-f44a-4db4-8fc3-5e893fc3cdec' || Purposeid == 'b10a19cd-85a8-4d94-8e5b-a8d3d8642366' || Purposeid == '36bb5039-76d9-4f65-b8ca-8b2c0fc5b7bc'  || Purposeid == 'db1b65d5-3589-4fb2-9a44-ddf1427397e1')
 	{
-		identifierValue = Phone;
+		identifierValue = '+'+Phone;
 	}
 	
 	
