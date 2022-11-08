@@ -50,7 +50,7 @@ define([
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
 
-                if (key === 'accountSid') {
+                /*if (key === 'accountSid') {
                     $('#accountSID').val(val);
                 }
 
@@ -64,9 +64,15 @@ define([
 
                 if (key === 'body') {
                     $('#messageBody').val(val);
-                }                                                               
+                }  */                                                             
 				if (key === 'pid') {
                     $('#pid').val(val);
+                } 
+				if (key === 'emailField') {
+                    $('#emailField').val(val);
+                } 
+				if (key === 'PhoneField') {
+                    $('#PhoneField').val(val);
                 } 
             })
         });
@@ -97,7 +103,11 @@ define([
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();*/
 		var pid = $('#pid').val();  
-        var emailbody = "{{Contact.Attribute.Custom_Activity_Test.Email}}"; 
+		var emailbody = $('#emailField').val(); 
+		var Phonebody = $('#PhoneField').val(); 
+        //var emailbody = "{{Contact.Attribute.Custom_Activity_Test.Email}}"; 
+		
+		 
         /*payload['arguments'].execute.inArguments = [{ 
             "AccessTokenURL": accountSid,
             "EndPoint": authToken,
@@ -111,7 +121,7 @@ define([
 		payload['arguments'].execute.inArguments = [{ 
 			"PurposeId": pid,
 			"email": emailbody,
-            "to": "{{Contact.Attribute.Custom_Activity_Test.Phone}}"   
+            "to": Phonebody,   
         }];
 
 
