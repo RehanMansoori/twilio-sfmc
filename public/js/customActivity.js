@@ -49,22 +49,7 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-
-                /*if (key === 'accountSid') {
-                    $('#accountSID').val(val);
-                }
-
-                if (key === 'authToken') {
-                    $('#authToken').val(val);
-                }
-
-                if (key === 'messagingService') {
-                    $('#messagingService').val(val);
-                }
-
-                if (key === 'body') {
-                    $('#messageBody').val(val);
-                }  */                                                             
+                                                        
 				if (key === 'pid') {
                     $('#pid').val(val);
                 } 
@@ -97,27 +82,11 @@ define([
     }
 
     function save() {
-
-        /*var accountSid = $('#accountSID').val();
-        var authToken = $('#authToken').val();
-        var messagingService = $('#messagingService').val();
-        var body = $('#messageBody').val();*/
 		var pid = $('#pid').val();  
 		var emailbodyJSON = $('#emailField').val(); 
 		var PhonebodyJSON = $('#PhoneField').val(); 
         var emailbody = "{{Contact.Attribute."+emailbodyJSON+"}}"; 
 		var Phonebody = "{{Contact.Attribute."+PhonebodyJSON+"}}"; 
-		
-		 
-        /*payload['arguments'].execute.inArguments = [{ 
-            "AccessTokenURL": accountSid,
-            "EndPoint": authToken,
-            "clientsecret": messagingService,
-            "clientId": body,
-			"PurposeId": pid,
-			"email": "{{Contact.Attribute.Custom_Activity_Test.Email}}" 
-            //"to": "7877706630"  //<----This should map to your data extension name and phone number columns 
-        }];*/
 		
 		payload['arguments'].execute.inArguments = [{ 
 			"PurposeId": pid,
@@ -125,9 +94,7 @@ define([
             "to": Phonebody,   
         }];
 
-
         payload['metaData'].isConfigured = true;
-
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
 

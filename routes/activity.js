@@ -36,8 +36,6 @@ function logData(req) {
 exports.edit = function (req, res) {
 
     console.log("5 -- For Edit");	 
-    //logData(req);
-    //res.send(200, 'Edit'); 
 	res.send({"status" : "OPT-IN"});	
 };
 
@@ -47,8 +45,6 @@ exports.edit = function (req, res) {
 exports.save = function (req, res) {
     
     console.log("5 -- For Save");	
-    //logData(req);
-    //res.send(200, 'Save');
 	res.send({"status" : "OPT-IN"});	
 };
 
@@ -58,16 +54,9 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     
     console.log("5 -- For EXECUTE");	
- 
 	var RequestBody = JSON.stringify(req.body);
 	var  jsonRequestBody = JSON.parse(RequestBody);
     console.log( "jsonRequestBody is:::  ",  jsonRequestBody.inArguments[0] );
-	
-	/*var clientId = jsonRequestBody.inArguments[0].clientId; 
-	var clinetsecret =jsonRequestBody.inArguments[0].clientsecret;
-	var accesstokenURL = jsonRequestBody.inArguments[0].AccessTokenURL;
-	var endPointURL = jsonRequestBody.inArguments[0].EndPoint;
-	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId */
 	
 	var clientId = 'bf57af864dda4364a64833a587876c55'; 
 	var clinetsecret = 'be9F0I4PwiqjsqVZXmAGjIHSWUmBHR1w';
@@ -91,10 +80,6 @@ exports.execute = function (req, res) {
 	
 	
 	console.log( "------------------START--------------------------");
-    /*console.log( "AccessTokenURL value is "+  accesstokenURL );	
-	console.log( "EndPoint value is "+  endPointURL );	
-	console.log( "clientsecret value is "+  clinetsecret );	
-	console.log( "clientId value is "+  clientId);*/
 	console.log( "clientId value is "+  email);	
 	console.log( "clientId value is "+  Phone);	
 	console.log( "clientId value is "+  Purposeid);	
@@ -168,15 +153,7 @@ exports.execute = function (req, res) {
 				res.send({"status" : "No-Response"});
 			}
 		});
-		
-
-	//res.send(JSON.parse(response.body)); 
 	});
-	//if(isActive == ''){
-		//res.send({"status" : "NO-Response"});
-	//}
-    //res.send({"access_token" : "success"});
-		
 };
 
 
@@ -187,8 +164,6 @@ exports.execute = function (req, res) {
 exports.publish = function (req, res) {
 
     console.log("5 -- For Publish");	
-    //logData(req);
-    //res.send(200, 'Publish');
 	res.send({"status" : "OPT-IN"});	
 };
 
@@ -198,7 +173,5 @@ exports.publish = function (req, res) {
 exports.validate = function (req, res) {
 
     console.log("5 -- For Validate");	
-    //logData(req);
-    //res.send(200, 'Validate');
 	res.send({"status" : "OPT-IN"});	
 };
