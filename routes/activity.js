@@ -173,17 +173,8 @@ exports.publish = function (req, res) {
 exports.validate = function (req, res) {
 	var RequestBody = JSON.stringify(req.body);
 	var  jsonRequestBody = JSON.parse(RequestBody);
-    console.log( "jsonRequestBody is:::  ",  jsonRequestBody.inArguments[0] );
+    console.log( "jsonRequestBody is:::  ",  jsonRequestBody );
 	
-	var Purposeid  = jsonRequestBody.inArguments[0].PurposeId ;
-	var email  = jsonRequestBody.inArguments[0].email;
-	var Phone  = jsonRequestBody.inArguments[0].to; 
-	
-	console.log( "------------------START VaLIDATE--------------------------");
-	console.log( "clientId value is "+  email);	
-	console.log( "clientId value is "+  Phone);	
-	console.log( "clientId value is "+  Purposeid);	
-	console.log( "-------------------END VaLIDATE-----------------------");
 
     console.log("5 -- For Validate");	
 	res.send({"status" : "OPT-IN"});
