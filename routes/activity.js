@@ -101,10 +101,10 @@ var options = {
 request(options, function (error, response) {
   if (error) throw new Error(error);
   console.log(response.body);
-  var x=10;
+  //var x=10;
 });
 
-    
+    var x=10;
     logData(req);
     res.send(200,x);
 
