@@ -101,12 +101,9 @@ var options = {
 request(options, function (error, response) {
   if (error) throw new Error(error);
   console.log(response.body);
-  //var x=10;
+  var x=10;
+  res.send(200,x);
 });
-
-    var x=10;
-    logData(req);
-    res.send(200,x);
 
     // Used to decode JWT
     // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
