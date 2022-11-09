@@ -65,15 +65,31 @@
         <div><label for="PhoneField">Phone Filed Name ( Syntex:{{Contact.Attribute.{DENAME}.{DE_Phone_FIELD_NAME}} )</label></div> 
         <input class="form-control" id="PhoneField" type="text" name="PhoneField" value="{{Contact.Attribute.Add_DE_NAME_HERE.Add_DE_Phone_Field_NAME_HERE}}">
     </div>  
-	<div class="form-group">
+	<!--<div class="form-group">
         <div><label for="pid">Purpose Id</label></div> 
         <input class="form-control" id="pid" type="text" name="pid" value="">
-    </div>  
-	
-	
-	
+    </div>-->
 
-	<table border="1">
+	<div class="form-group">	
+	<div><label for="pid">Purpose Id</label></div> 
+	<select name="pid" id="pid">
+		<option value="8a50804c-8502-4fa2-bf5f-bf661f7a3523">Arçelik Email : 8a50804c-8502-4fa2-bf5f-bf661f7a3523</option>
+		<option value="97480c2d-f44a-4db4-8fc3-5e893fc3cdec">Arçelik SMS : 97480c2d-f44a-4db4-8fc3-5e893fc3cdec</option>
+		
+		<option value="531dfa64-a963-4005-971a-d4dc48399ca7">Beko Email: 531dfa64-a963-4005-971a-d4dc48399ca7</option>
+		<option value="b10a19cd-85a8-4d94-8e5b-a8d3d8642366">Beko SMS: b10a19cd-85a8-4d94-8e5b-a8d3d8642366</option>
+		
+		
+		<option value="74a012ac-db2d-464d-8b2a-581b63e0365b">Grundig Email: 74a012ac-db2d-464d-8b2a-581b63e0365b</option>
+		<option value="36bb5039-76d9-4f65-b8ca-8b2c0fc5b7bc">Grundig SMS: 36bb5039-76d9-4f65-b8ca-8b2c0fc5b7bc</option>
+		
+		<option value="9f4fbe04-9b74-42fe-9d51-cbbbb21688c1">Oliz Email: 9f4fbe04-9b74-42fe-9d51-cbbbb21688c1</option>
+		<option value="db1b65d5-3589-4fb2-9a44-ddf1427397e1">Oliz SMS: db1b65d5-3589-4fb2-9a44-ddf1427397e1</option>
+
+	</select>
+	 </div>
+
+	<!--<table border="1">
   <tr>
     <th>Purpose Id for SMS Consent:</th>
     <th>Purpose Id for Email Consent:</th> 
@@ -99,7 +115,7 @@
    <td>Oliz Email: 9f4fbe04-9b74-42fe-9d51-cbbbb21688c1</td>
   </tr>
 
-</table>  
+</table>-->  
 
 	
 
