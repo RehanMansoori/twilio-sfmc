@@ -106,7 +106,7 @@ request(options, function (error, response) {
  var access_token = obj.access_token;
 	console.log('access token '+access_token);
   //var x=10;
-  res.send(200,access_token);
+  res.send('access_token',access_token);
 });
 
     // Used to decode JWT
