@@ -173,9 +173,9 @@ exports.publish = function (req, res) {
 exports.validate = function (req, res) {
 	 
     console.log("5 -- For Validate");	
-	//res.send({"status" : "OPT-IN"});
+	res.send({"status" : "OPT-IN"});
 	//req.status(400).json({ message: "This is an invalid request" });	
 	//res.status(400).send(new Error('This is an invalid request'));
-	res.status(400);
-	res.send('This is an invalid request');
+	//res.status(400);
+	//res.send('This is an invalid request');
 };
