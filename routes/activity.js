@@ -53,14 +53,7 @@ function logData(req) {
 exports.edit = function (req, res) {
 
     console.log("5 -- For Edit");	
-    console.log("4");	
-    console.log("3");	
-    console.log("2");	
-    console.log("1");	
-    //console.log("Edited: "+req.body.inArguments[0]);    
-    
-    // Data from the req and put it in an array accessible to the main app.
-    //console.log( req.body );
+    console.log("4");
     logData(req);
     res.send(200, 'Edit');
 };
@@ -95,30 +88,8 @@ exports.execute = function (req, res) {
     console.log("1");	
     //console.log("Executed: "+req.body.inArguments[0]);
     
-    var requestBody = req.body.inArguments[0];
-
-    const accountSid = requestBody.accountSid;
-    const authToken = requestBody.authToken;
-    const to = requestBody.to;
-    const from = requestBody.messagingService;
-    const body = requestBody.body;;
-
-    const client = require('twilio')(accountSid, authToken); 
-     
-    client.messages 
-          .create({ 
-             body: body,
-             messagingService: messagingService,
-             to: to
-           }) 
-          .then(message => console.log(message.sid)) 
-          .done();
-
-
-
-    // FOR TESTING
     logData(req);
-    res.send(200, 'Publish');
+    res.send(200, 'execute');
 
     // Used to decode JWT
     // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
