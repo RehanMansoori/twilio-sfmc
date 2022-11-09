@@ -55,14 +55,15 @@
         <input class="form-control" id="authToken" type="text" name="authToken" value="">
     </div>  -->
 
-	
+	<!-- (Syntex:{{Contact.Attribute.{DENAME}.{DE_EMAIL_FIELD_NAME}} )-->
+	<!-- ( Syntex:{{Contact.Attribute.{DENAME}.{DE_Phone_FIELD_NAME}} )-->
 	<div class="form-group">
-        <div><label for="emailField">Email Field Name ( Syntex:{{Contact.Attribute.{DENAME}.{DE_EMAIL_FIELD_NAME}} ) </label></div> 
+        <div><label for="emailField">Email Field Name  (Syntex: DATAEXTENSION_NAME.EMAIL_FIELD_NAME ) </label></div> 
         <input class="form-control" id="emailField" type="text" name="emailField" value="{{Contact.Attribute.Add_DE_NAME_HERE.Add_DE_Email_Field_NAME_HERE}}">
     </div>  
 	
 	<div class="form-group">
-        <div><label for="PhoneField">Phone Filed Name ( Syntex:{{Contact.Attribute.{DENAME}.{DE_Phone_FIELD_NAME}} )</label></div> 
+        <div><label for="PhoneField">Phone Filed Name (Syntex: DATAEXTENSION_NAME.Phone_FIELD_NAME )</label></div> 
         <input class="form-control" id="PhoneField" type="text" name="PhoneField" value="{{Contact.Attribute.Add_DE_NAME_HERE.Add_DE_Phone_Field_NAME_HERE}}">
     </div>  
 	<!--<div class="form-group">
