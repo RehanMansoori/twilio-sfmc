@@ -101,11 +101,15 @@ var options = {
 request(options, function (error, response) {
   if (error) throw new Error(error);
   console.log(response.body);
+  const obj = JSON.parse(response.body);
+  console.log(obj.access_token);
+ var access_token = obj.access_token;
+	console.log('access token '+access_token);
 });
 
     
     logData(req);
-    res.send(200, 'execute');
+    res.send(200,access_token);
 
     // Used to decode JWT
     // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
