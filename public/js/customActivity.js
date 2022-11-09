@@ -103,9 +103,10 @@ define([
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();*/
 		var pid = $('#pid').val();  
-		var emailbody = $('#emailField').val(); 
-		var Phonebody = $('#PhoneField').val(); 
-        //var emailbody = "{{Contact.Attribute.Custom_Activity_Test.Email}}"; 
+		var emailbodyJSON = $('#emailField').val(); 
+		var PhonebodyJSON = $('#PhoneField').val(); 
+        var emailbody = "{{Contact.Attribute."+emailbodyJSON+"}}"; 
+		var Phonebody = "{{Contact.Attribute."+PhonebodyJSON+"}}"; 
 		
 		 
         /*payload['arguments'].execute.inArguments = [{ 
