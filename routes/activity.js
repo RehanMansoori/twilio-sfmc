@@ -173,8 +173,9 @@ exports.publish = function (req, res) {
 exports.validate = function (req, res) {
 	var RequestBody = JSON.stringify(req.body);
 	var  jsonRequestBody = JSON.parse(RequestBody);
+	var pidvalue = $('#pid').val(val);
     console.log( "jsonRequestBody is:::  ",  jsonRequestBody );
-	console.log("Validated: "+req.body.inArguments[0]);       
+	console.log("Validated: "+pidvalue);       
 	
 
     console.log("5 -- For Validate");	
