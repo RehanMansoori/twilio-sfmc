@@ -83,23 +83,23 @@
             "execute": {
                 "inArguments": [                  
 					{
-                        "PurposeId": {
+                        "pid": {
                             "dataType": "text",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"  
                         }
                     },
                     {
                         "to": {
                             "dataType": "Phone",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
                     {
                         "email": {
                             "dataType": "Email",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"
                         }
                     }
