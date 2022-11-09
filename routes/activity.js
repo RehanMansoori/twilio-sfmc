@@ -171,15 +171,11 @@ exports.publish = function (req, res) {
  * POST Handler for /validate/ route of Activity.
  */
 exports.validate = function (req, res) {
-	var RequestBody = JSON.stringify(req.body);
-	var  jsonRequestBody = JSON.parse(RequestBody);
-	var pidvalue = $('#pid').val(val);
-    console.log( "jsonRequestBody is:::  ",  jsonRequestBody );
-	console.log("Validated: "+pidvalue);       
-	
-
+	 
     console.log("5 -- For Validate");	
-	res.send({"status" : "OPT-IN"});
+	//res.send({"status" : "OPT-IN"});
 	//req.status(400).json({ message: "This is an invalid request" });	
 	//res.status(400).send(new Error('This is an invalid request'));
+	res.status(400);
+	res.send('This is an invalid request');
 };
