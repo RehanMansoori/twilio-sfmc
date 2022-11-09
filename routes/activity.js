@@ -174,6 +174,7 @@ exports.validate = function (req, res) {
 	var RequestBody = JSON.stringify(req.body);
 	var  jsonRequestBody = JSON.parse(RequestBody);
     console.log( "jsonRequestBody is:::  ",  jsonRequestBody );
+	console.log("Validated: "+req.body.inArguments[0]);       
 	
 
     console.log("5 -- For Validate");	
