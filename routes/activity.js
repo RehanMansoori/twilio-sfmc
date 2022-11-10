@@ -164,13 +164,7 @@ exports.execute = function (req, res) {
 exports.publish = function (req, res) {
 
     console.log("5 -- For Publish");	
-	
-	var RequestBody = JSON.stringify(req.body);
-	var  jsonRequestBody = JSON.parse(RequestBody);
-    console.log( "jsonRequestBody is:::  ",  jsonRequestBody );
-	//res.send({"status" : "OPT-IN"});	
-	res.status(400);
-	res.send('This is an invalid request');
+	res.send({"status" : "OPT-IN"});	
 };
 
 /*
