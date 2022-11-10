@@ -81,7 +81,7 @@ define([
         console.log("Get End Points function: "+JSON.stringify(endpoints));
     }
 
-    function save() {
+    function save(event) {
 		var pid = $('#pid').val();  
 		var emailbodyJSON = $('#emailField').val(); 
 		var PhonebodyJSON = $('#PhoneField').val(); 
@@ -98,7 +98,7 @@ define([
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
 		alert('test');
-		stopPropagation();
+		event.stopPropagation();
 
     }                    
 
