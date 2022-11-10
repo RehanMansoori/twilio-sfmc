@@ -98,7 +98,6 @@ define([
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
 		alert('test'+event);
-		event.stopPropagation();
 		return false;
 
     }                    
