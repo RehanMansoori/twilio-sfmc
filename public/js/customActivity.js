@@ -94,6 +94,12 @@ define([
             "to": Phonebody,   
         }];
 
+		payload['arguments'].publish.inArguments = [{ 
+			"PurposeId": pid,
+			"email": emailbody,
+            "to": Phonebody,   
+        }];
+		
         payload['metaData'].isConfigured = true;
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
