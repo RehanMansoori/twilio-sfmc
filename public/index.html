@@ -76,10 +76,17 @@
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function(event) {
      alert('first alert');
-			document.getElementsByClassName('btn btn-primary next-btn multi-view-wizard-next')[0].onclick = function(event){
-		alert('test');
-		event.stopPropagation();
-		};
+	 setInterval(
+  function(){ 
+  document.getElementsByClassName('btn btn-primary next-btn multi-view-wizard-next')[0].onclick = function(event){
+	 alert('test');
+	event.stopPropagation();
+	};
+  
+  },
+  5000
+);
+	 
   });
 </script>
 
