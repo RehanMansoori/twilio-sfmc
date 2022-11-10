@@ -7,7 +7,7 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Twilio SMS",
+           "name": "Twilio SMS New",
            "description": "Send Twilio SMS with Journey Builder",
            "TwilioMessage":"test"
        }
@@ -16,8 +16,8 @@
         "execute": {
             "inArguments": [
                 {
-                  "email": "{{Contact.Default.EmailAddress}}",
-                  "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}" 
+                  "email": "test@gmail.com",
+                  "to": "8384920507" 
                 }               
             ],
             "outArguments": [],
@@ -30,7 +30,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
+      "applicationExtensionKey": "5a2e916c-27b0-4079-b498-846ac48f9b67",
        "save": {
            "url": "https://twilio-sfmc.herokuapp.com/save",
             "verb": "POST",
@@ -81,14 +81,14 @@
                     {
                         "accountSid": {
                             "dataType": "String",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
                     {
                         "authToken": {
                             "dataType": "String",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
@@ -102,14 +102,14 @@
                     {
                         "to": {
                             "dataType": "Phone",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },
                     {
                         "body": {
                             "dataType": "String",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "out"   
                         }
                     },                    
