@@ -81,7 +81,7 @@ define([
         console.log("Get End Points function: "+JSON.stringify(endpoints));
     }
 
-    function save(event) {
+    function save() {
 		var pid = $('#pid').val();  
 		var emailbodyJSON = $('#emailField').val(); 
 		var PhonebodyJSON = $('#PhoneField').val(); 
@@ -97,7 +97,7 @@ define([
         payload['metaData'].isConfigured = true;
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
-		alert('test'+event);
+		alert('test');
 		return false;
 
     }                    
