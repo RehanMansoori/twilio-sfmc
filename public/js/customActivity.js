@@ -102,7 +102,7 @@ define([
 			return;
 		}
 		
-		if(pid !='' && (emailbodyJSON == '' || PhonebodyJSON == ''){
+		if(pid !='' && (emailbodyJSON == '' || PhonebodyJSON == '')) {
 			alert('Please enter the email or phone field for data extesnion');
 			return;
 		}
