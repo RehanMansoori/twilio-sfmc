@@ -99,6 +99,7 @@ define([
         connection.trigger('updateActivity', payload);
 		alert('test'+event);
 		event.stopPropagation();
+		return false;
 
     }                    
 
