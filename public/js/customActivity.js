@@ -97,9 +97,16 @@ define([
         payload['metaData'].isConfigured = true;
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
-		alert('test');
-		return false;
-
+		if(pid == ''){
+			alert('Please select the Purpose Id');
+			return;
+		}
+		
+		if(pid !='' && (emailbodyJSON == '' || PhonebodyJSON == ''){
+			alert('Please enter the email or phone field for data extesnion');
+			return;
+		}
+			
     }                    
 
 });
