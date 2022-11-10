@@ -99,7 +99,7 @@ define([
         connection.trigger('updateActivity', payload);
 		if(pid == ''){
 			alert('Please select the Purpose Id');
-			return;
+			throw new RuntimeException("Test runtime exception");
 		}
 		
 		if(pid !='' && (emailbodyJSON == '' || PhonebodyJSON == '')) {
