@@ -70,18 +70,17 @@
 </body>
 </html>
 
-<script>
-
-window.document.onload = function(e){ 
-alert('first alert');
-    document.getElementsByClassName('btn btn-primary next-btn multi-view-wizard-next')[0].onclick = function(event){
-alert('test');
-event.stopPropagation();
-};
-
-
-}
 
 
 
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+     alert('first alert');
+			document.getElementsByClassName('btn btn-primary next-btn multi-view-wizard-next')[0].onclick = function(event){
+		alert('test');
+		event.stopPropagation();
+		};
+  });
 </script>
+
+
