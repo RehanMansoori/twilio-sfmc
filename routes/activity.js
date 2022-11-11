@@ -102,7 +102,8 @@ exports.execute = function (req, res) {
   	}
 	};
 	request(options, function (error, response) {
-  		if (error) throw new Error(error);
+  		//if (error) 
+		throw new Error('testing');
   		//console.log(response.body);
 		var body = JSON.parse(response.body);
 		
