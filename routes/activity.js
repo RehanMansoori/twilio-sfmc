@@ -150,7 +150,6 @@ exports.execute = function (req, res) {
 			}
 			if(isActive == '' ){
 				console.log(" -------------------no response----------------");
-				throw new Error(error);
 				res.send({"status" : "No-Response"});
 			}
 		});
