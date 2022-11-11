@@ -102,8 +102,7 @@ exports.execute = function (req, res) {
   	}
 	};
 	request(options, function (error, response) {
-  		//if (error) 
-		throw new Error('testing');
+  		if (error) throw new Error(error);
   		//console.log(response.body);
 		var body = JSON.parse(response.body);
 		
@@ -151,6 +150,7 @@ exports.execute = function (req, res) {
 			}
 			if(isActive == '' ){
 				console.log(" -------------------no response----------------");
+				throw new Error(error);
 				res.send({"status" : "No-Response"});
 			}
 		});
